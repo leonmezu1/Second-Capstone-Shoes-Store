@@ -5,11 +5,17 @@ html {
 
 body {
   height: 100vh;
-  font: 400 1.6rem/100% 'Arimo', sans-serif;
+  font: 400 1.6rem/100% "Arimo", sans-serif;
 }
 
 img {
   width: 100%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .w95 {
@@ -17,11 +23,11 @@ img {
 }
 
 .robo {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .arimo {
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .black {
@@ -77,6 +83,7 @@ img {
   font-size: 1rem !important;
 }
 .navigation-bar .navigation-title .aligned {
+  text-transform: uppercase;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -88,27 +95,58 @@ img {
           align-items: center;
 }
 
-main .image-container {
+.main-wrapper {
+  height: calc(100vh - $navheight);
+}
+
+.image-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
   margin: 0 auto;
+  height: 100%;
 }
-main .image-container .main-image {
-  max-height: 55.625%;
+.image-container .solo-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 auto;
+  height: 100%;
+}
+.image-container .main-image {
+  height: 80%;
+  width: 95%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 768px) {
-  main .image-container .main-image {
+  .image-container .main-image {
     position: relative;
     height: 95vh;
   }
 }
-main .box-title {
+
+.box-title {
   padding: 4rem;
   max-width: 50%;
   height: 40rem;
@@ -135,46 +173,55 @@ main .box-title {
   position: absolute;
   z-index: 2;
 }
-main .box-title > * {
+.box-title > * {
   font-size: 3rem;
   font-weight: 900 !important;
 }
-main .title {
-  max-height: 20rem;
+
+.title {
+  max-height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-flex: 1;
       -ms-flex: 1 0;
           flex: 1 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   text-transform: uppercase;
 }
-main .title h1 {
-  font-size: 3rem;
+.title h1 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
   font-weight: 900 !important;
 }
-main .no-deco {
+
+.no-deco {
   text-decoration: none;
 }
-main .standar-l {
+
+.standar-l {
   font-size: 1.8rem;
   text-transform: capitalize;
 }
+
 @media screen and (max-width: 767px) {
-  main .box-title {
+  .box-title {
     display: none;
   }
 }
 @media screen and (min-width: 768px) {
-  main .title {
+  .title {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024) {
+  .navigation-bar {
     display: none;
   }
 }
