@@ -1,3 +1,182 @@
+html {
+  font-size: 10px;
+  background-color: #f2f2f2;
+}
 
+body {
+  height: 100vh;
+  font: 400 1.6rem/100% 'Arimo', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.w95 {
+  width: 95%;
+}
+
+.robo {
+  font-family: 'Roboto', sans-serif;
+}
+
+.arimo {
+  font-family: 'Arimo', sans-serif;
+}
+
+.black {
+  font-weight: 900 !important;
+}
+
+.mn-text-clr {
+  color: #000;
+}
+
+.fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navigation-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5rem;
+  background-color: #f2f2f2;
+}
+.navigation-bar > * {
+  margin: 0 2rem;
+}
+.navigation-bar .menu-icon {
+  font-size: 2.5rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: left;
+}
+.navigation-bar .navigation-title {
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navigation-bar .navigation-title .fa-times {
+  font-size: 1rem !important;
+}
+.navigation-bar .navigation-title .aligned {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+main .image-container .main-image {
+  max-height: 55.625%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  main .image-container .main-image {
+    position: relative;
+    height: 95vh;
+  }
+}
+main .box-title {
+  padding: 4rem;
+  max-width: 50%;
+  height: 40rem;
+  bottom: 0;
+  right: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 2;
+}
+main .box-title > * {
+  font-size: 3rem;
+  font-weight: 900 !important;
+}
+main .title {
+  max-height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem auto;
+  text-transform: uppercase;
+}
+main .title h1 {
+  font-size: 3rem;
+  font-weight: 900 !important;
+}
+main .no-deco {
+  text-decoration: none;
+}
+main .standar-l {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 767px) {
+  main .box-title {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .title {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

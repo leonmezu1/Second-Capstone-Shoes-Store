@@ -1,0 +1,151 @@
+html {
+  font-size: 10px;
+  background-color: #f2f2f2;
+}
+
+body {
+  height: 100vh;
+  font: 400 1.6rem/100% 'Arimo', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.w95 {
+  width: 95%;
+}
+
+.robo {
+  font-family: 'Roboto', sans-serif;
+}
+
+.arimo {
+  font-family: 'Arimo', sans-serif;
+}
+
+.black {
+  font-weight: 900 !important;
+}
+
+.mn-text-clr {
+  color: #000;
+}
+
+.fixed {
+  position: sticky;
+  top: 0;
+}
+
+.navigation-bar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 5rem;
+  background-color: #f2f2f2;
+
+  > * {
+    margin: 0 2rem;
+  }
+
+  .menu-icon {
+    font-size: 2.5rem;
+    align-self: center;
+    text-align: left;
+  }
+
+  .navigation-title {
+    font-size: 1.8rem;
+    display: flex;
+    text-align: right;
+    align-self: center;
+    align-items: center;
+
+    .fa-times {
+      font-size: 1rem !important;
+    }
+
+    .aligned {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+main {
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    .main-image {
+      max-height: 55.625%;
+      object-fit: cover;
+      @media screen and (min-width: 768px) {
+        position: relative;
+        height: 95vh;
+      }
+    }
+  }
+
+  .box-title {
+    padding: 4rem;
+    max-width: 50%;
+    height: 40rem;
+    bottom: 0;
+    right: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+
+    > * {
+      font-size: 3rem;
+      font-weight: 900 !important;
+    }
+  }
+
+  .title {
+    max-height: 20rem;
+    display: flex;
+    flex: 1 0;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1rem auto;
+    text-transform: uppercase;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900 !important;
+    }
+  }
+
+  .no-deco {
+    text-decoration: none;
+  }
+
+  .standar-l {
+
+    font-size: 1.8rem;
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 767px) {
+    .box-title {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .title {
+      display: none;
+    }
+  }
+}
